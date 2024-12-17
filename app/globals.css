@@ -16,6 +16,25 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip {
+  .front {
+    transform: rotateY(0deg);
+  }
+  .back {
+    transform: rotateY(90deg);
+  }
+
+  &:active {
+    .front {
+      transform: rotateY(90deg);
+      backface-visibility: hidden;
+    }
+    .back {
+      transform: rotateY(180deg);
+    }
+  }
 }
