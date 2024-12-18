@@ -1,6 +1,6 @@
-import { BaseCardItem } from '@/features/routes/card-interaction/components/BaseCardItem';
+import { BaseCardItem } from '@/features/routes/card/components/BaseCardItem';
 
-export default function CardInteractionPage() {
+export default function CardPage() {
   return (
     <div className="max-w-[600px] mx-auto my-[80px]">
       <div className="mx-4 space-y-10">
