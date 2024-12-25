@@ -39,16 +39,16 @@ export default function CardPage() {
 
           <div
             style={{ transformStyle: 'preserve-3d', perspective: '600px' }}
-            className="relative flip"
+            className="relative flip group"
           >
-            <div className="front transition">
+            <div className="front transition duration-300 delay-300 group-active:delay-0">
               <BaseCardItem>
                 <div className="flex justify-center items-center h-[140px]">
                   <span className="text-[36px]">👊</span>
                 </div>
               </BaseCardItem>
             </div>
-            <div className="absolute top-0 w-full z-10 back transition delay-500">
+            <div className="absolute top-0 w-full z-10 back transition duration-300 group-active:delay-300">
               <BaseCardItem className="!bg-[#333]" />
             </div>
           </div>
