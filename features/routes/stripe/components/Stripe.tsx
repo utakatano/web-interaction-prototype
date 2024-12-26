@@ -1,5 +1,6 @@
 'use client';
 
+import { normalizeToRange } from '@/utils/normalizeToRange';
 import { useEffect, useRef, useState, type MouseEvent } from 'react';
 
 const INIT_STRIPE_POS_Y = -5;
@@ -15,17 +16,6 @@ export const Stripe = () => {
   const [textTransformStyle, setTextTransformStyle] = useState<
     string | undefined
   >(undefined);
-
-  const normalizeToRange = (
-    value: number,
-    inputMin: number,
-    inputMax: number,
-    outputMin: number,
-    outputMax: number
-  ) => {
-    const normalizedValue = (value - inputMin) / (inputMax - inputMin); // 正規化して0 ~ 1にする
-    return normalizedValue * (outputMax - outputMin) + outputMin; // 出力範囲に変換
-  };
 
   const handleCanvasMouseMove = (e: MouseEvent) => {
     const startX = (window.innerWidth - STRIPE_CANVAS_WIDTH) / 2;
